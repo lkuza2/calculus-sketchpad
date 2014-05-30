@@ -46,7 +46,7 @@ public class FunctionEvaluatorUtil {
 
     private double evaluateDiffyEq(String equation, double x, double y) {
         try {
-            return new ExpressionBuilder(equation).withVariable("x", x).withVariable("y", y).build().calculate();
+            return new ExpressionBuilder(equation).withVariable("x", x).withVariable("y", y).withVariable("e", Math.E).build().calculate();
         } catch (UnknownFunctionException e) {
             e.printStackTrace();
         } catch (UnparsableExpressionException e) {

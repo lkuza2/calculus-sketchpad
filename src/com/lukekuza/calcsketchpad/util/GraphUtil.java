@@ -28,7 +28,7 @@ public class GraphUtil {
         int index = 0;
         for (double i = minX; i <= maxX; i += step) {
             xaxis[index] = i;
-            yvalues[index] = new ExpressionBuilder(equation).withVariable("x", i).build().calculate();
+            yvalues[index] = new ExpressionBuilder(equation).withVariable("x", i).withVariable("e", Math.E).build().calculate();
             index++;
         }
 
